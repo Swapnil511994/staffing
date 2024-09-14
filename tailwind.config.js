@@ -7,7 +7,16 @@ export default {
         greyOpaque: "rgb(230 230 230 / .6)",
         gray: "rgb(230 230 230 / 1)",
       },
-      opacity: {},
+      keyframes: {
+        pulseBackground: {
+          "0%, 100%": { backgroundColor: "rgba(255, 255, 255, 0.1)" },
+          "50%": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+        },
+      },
+      animation: {
+        pulseBackground: "pulseBackground 3s infinite",
+      },
+      scrollBehavior: ["smooth"],
       boxShadow: {
         headerShadow:
           "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(255 255 255)",

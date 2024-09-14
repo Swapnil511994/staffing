@@ -13,8 +13,11 @@ const Header = () => {
   };
 
   return (
-    <div className="shadow-headerShadow pb-5 md:pb-10">
-      <div className="flex justify-between  lg:hidden xl:hidden w-full p-2">
+    <div
+      id="header"
+      className="sticky top-0 z-10 shadow-headerShadow m-0 pb-5 md:pb-10 bg-black rounded-none"
+    >
+      <div className="flex justify-between  lg:hidden xl:hidden w-full p-2 rounded-none">
         <a href="#home">
           <img src={Logo} alt="Logo" width="150" />
         </a>
@@ -53,7 +56,6 @@ const Header = () => {
         >
           <img src={Logo} alt="Logo" width="150" />
         </a>
-       
 
         <a
           href="#think"
@@ -78,24 +80,24 @@ const Header = () => {
       <Dialog
         open={isOpen}
         as="div"
-        className="relative z-10 focus:outline-none h-full p-0"
+        className="relative z-10 focus:outline-none h-full p-0 rounded-none	"
         onClose={close}
       >
-        <div className="fixed inset-0 z-10 w-screen h-screen p-0">
-          <div className="flex items-center justify-center p-0  w-screen h-screen">
+        <div className="fixed inset-0 z-10 w-screen h-screen p-0 rounded-none	">
+          <div className="flex items-center justify-center p-0  w-screen h-screen rounded-none	">
             <DialogPanel
               transition
               className="w-full max-w-md 
-              rounded-xl
                bg-white/5 
+               rounded-none	
                backdrop-blur-2xl 
                duration-1000
                ease-out 
-               data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
+               data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0 "
             >
               <div className="flex h-screen w-screen flex-col ">
                 <div className="flex justify-between lg:hidden xl:hidden w-full p-2 shadow-headerPopupShadow pb-5 md:pb-10">
-                  <a href="/">
+                  <a href="#home">
                     <img src={Logo} alt="Logo" width="150" />
                   </a>
 

@@ -1,6 +1,19 @@
 const LandingFirst = () => {
   return (
-    <div className="text-greyOpaque text-center pt-[100px] pl-[50px] pr-[50px] md:pt-[300px] pb-[100px] md:h-[600px]">
+    <div
+      id="home"
+      className="z-[1] 
+    text-greyOpaque 
+    text-center  
+    pl-[50px] 
+    pr-[50px]  
+    pb-[100px] 
+    pt-[100px]
+    md:h-[900px]
+    flex flex-col
+    items-center justify-center
+    animate-pulseBackground"
+    >
       <h1 className="text-[52px] text-white">
         Connecting Talent with Opportunity for a Smarter Workforce.
       </h1>
