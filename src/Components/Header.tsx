@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Logo from "../assets/logo-white.png";
-import { Bars3BottomLeftIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/outline";
 import { Dialog, DialogPanel } from "@headlessui/react";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,9 +13,9 @@ const Header = () => {
   };
 
   return (
-    <>
+    <div className="shadow-headerShadow pb-5 md:pb-10">
       <div className="flex justify-between  lg:hidden xl:hidden w-full p-2">
-        <a href="/">
+        <a href="#home">
           <img src={Logo} alt="Logo" width="150" />
         </a>
 
@@ -24,33 +24,54 @@ const Header = () => {
           onClick={open}
           className="text-greyOpaque hover:text-gray mr-2"
         >
-          <Bars3BottomLeftIcon className="w-8 h-8 text-white" />
+          <Bars3Icon className="w-8 h-8 text-white" />
         </button>
       </div>
 
-      <div className="hidden md:flex justify-around text-[18px] font-semibold items-center">
-        <a href="/" className="text-greyOpaque hover:text-gray">
+      <div className="hidden md:flex justify-around text-[18px] font-semibold items-center pt-2">
+        <a
+          href="#about"
+          className="text-white hover:text-gray-400 text-xl text-[32px] mt-5"
+        >
           About
         </a>
-        <a href="/" className="text-greyOpaque hover:text-gray">
+        <a
+          href="#services"
+          className="text-white hover:text-gray-400 text-xl text-[32px] mt-5"
+        >
           Services
         </a>
-        <a href="/" className="text-greyOpaque hover:text-gray">
+        <a
+          href="#work"
+          className="text-white hover:text-gray-400 text-xl text-[32px] mt-5"
+        >
           Work
         </a>
-
-        <a href="/">
-          <img src={Logo} width="150"></img>
+        <a
+          href="#home"
+          className="text-white hover:text-gray-400 text-xl text-[32px] mt-5"
+        >
+          <img src={Logo} alt="Logo" width="150" />
         </a>
+       
 
-        <a href="/" className="text-greyOpaque hover:text-gray">
+        <a
+          href="#think"
+          className="text-white hover:text-gray-400 text-xl text-[32px] mt-5"
+        >
           Think
         </a>
-        <a href="/" className="text-greyOpaque hover:text-gray">
+        <a
+          href="#culture"
+          className="text-white hover:text-gray-400 text-xl text-[32px] mt-5"
+        >
           Culture
         </a>
-        <a href="/" className="text-greyOpaque hover:text-gray">
-          Get in touch
+        <a
+          href="#contact"
+          className="text-white hover:text-gray-400 text-xl text-[32px] mt-5"
+        >
+          Get In Touch
         </a>
       </div>
 
@@ -72,8 +93,8 @@ const Header = () => {
                ease-out 
                data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
             >
-              <div className="flex h-screen w-screen flex-col">
-                <div className="flex justify-between lg:hidden xl:hidden w-full p-2">
+              <div className="flex h-screen w-screen flex-col ">
+                <div className="flex justify-between lg:hidden xl:hidden w-full p-2 shadow-headerPopupShadow pb-5 md:pb-10">
                   <a href="/">
                     <img src={Logo} alt="Logo" width="150" />
                   </a>
@@ -88,40 +109,40 @@ const Header = () => {
                 </div>
                 <div className="flex flex-col items-start p-3 ">
                   <a
-                    href="/"
-                    className="text-white hover:text-gray-400 text-xl text-[32px] mt-5"
+                    href="#about"
+                    className="text-white hover:text-gray-400 text-xl text-[32px] mt-2"
                   >
                     About
                   </a>
                   <a
-                    href="/"
+                    href="#services"
                     className="text-white hover:text-gray-400 text-xl text-[32px] mt-5"
                   >
                     Services
                   </a>
                   <a
-                    href="/"
+                    href="#work"
                     className="text-white hover:text-gray-400 text-xl text-[32px] mt-5"
                   >
                     Work
                   </a>
                   <a
-                    href="/"
+                    href="#think"
                     className="text-white hover:text-gray-400 text-xl text-[32px] mt-5"
                   >
                     Think
                   </a>
                   <a
-                    href="/"
+                    href="#culture"
                     className="text-white hover:text-gray-400 text-xl text-[32px] mt-5"
                   >
                     Culture
                   </a>
                   <a
-                    href="/"
+                    href="#contact"
                     className="text-white hover:text-gray-400 text-xl text-[32px] mt-5"
                   >
-                    Get in touch
+                    Get In Touch
                   </a>
                 </div>
                 <div className="flex items-start mr-2"></div>
@@ -130,7 +151,7 @@ const Header = () => {
           </div>
         </div>
       </Dialog>
-    </>
+    </div>
   );
 };
 
