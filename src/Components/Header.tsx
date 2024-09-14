@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Logo from "../assets/logo-white.png";
 import { Bars3BottomLeftIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
+import { Dialog, DialogPanel } from "@headlessui/react";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
